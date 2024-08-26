@@ -5,22 +5,29 @@ import lombok.NoArgsConstructor;
 import lombok.Builder;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class LoanResponse {
-
-    private Date date;
-    private BigDecimal loanAmount;
-    private BigDecimal outstandingBalance;
+    private LocalDate date;
+    @Builder.Default
+    private BigDecimal loanAmount = BigDecimal.ZERO;
+    @Builder.Default
+    private BigDecimal outstandingBalance = BigDecimal.ZERO;
     private String consolidated;
-    private BigDecimal total;
-    private BigDecimal amortization;
-    private BigDecimal balance;
-    private BigDecimal provision;
-    private BigDecimal accumulated;
-    private BigDecimal paid;
+    @Builder.Default
+    private BigDecimal total = BigDecimal.ZERO;
+    @Builder.Default
+    private BigDecimal amortization = BigDecimal.ZERO;
+    @Builder.Default
+    private BigDecimal balance = BigDecimal.ZERO;
+    @Builder.Default
+    private BigDecimal provision = BigDecimal.ZERO;
+    @Builder.Default
+    private BigDecimal accumulated = BigDecimal.ZERO;
+    @Builder.Default
+    private BigDecimal paid = BigDecimal.ZERO;
 
 }

@@ -4,17 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Builder;
 
-import java.util.Date;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class LoanRequest {
 
-    private Date endDate;
-    private Date firstPaymentDate;
-    private Date initialDate;
-    private double interestRate;
-    private double loanAmount;
+    private LocalDate endDate;
+    private LocalDate firstPaymentDate;
+    private LocalDate initialDate;
+    private BigDecimal interestRate;
+    private BigDecimal loanAmount;
 
 }
